@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = __importDefault(require("express"));
+var controller = require("../controllers/controller");
+var authorization = require('../middleware/Authentication');
+var charoomController = require('../controllers/ChatRoomController');
+var router = express_1.default.Router();
+router.post("/RegUser", controller.adduser);
+router.post("/loginUser", controller.loginUser);
+router.post('/create', authorization, controller.CreatePost);
+router.get('/getallPost', controller.getAllPost);
+router.get('/getPostOfOneUser', authorization, controller.getPostOfOneUser);
+router.get('/checktoken', controller.userVerify);
+router.get('/logout', controller.logout);
+router.get('/alluser', controller.getAlluser);
+router.put('/like', authorization, controller.likePost);
+router.put('/Unlike', authorization, controller.DislikePost);
+router.put('/commnet', authorization, controller.CreateComment);
+router.put('/chatSetup/:id', authorization, charoomController.setUpChatRoom);
+router.get('/getChatRoom/:id', charoomController.getChatroomId);
+router.get('/getChatRoomOwner', authorization, charoomController.getChatroomOwner);
+exports.default = router;

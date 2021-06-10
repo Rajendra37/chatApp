@@ -1,0 +1,50 @@
+.main-div
+{
+  box-shadow: 0px 4px 8px 0px #5c5c5c;
+  display: inline-flex;
+  margin-top: 10%;
+  margin-left:30%;
+  background: white;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.img-div
+{
+  border-radius: 20px;
+  padding: 10px;
+  width: 350px;
+  
+}
+.form-div
+{
+  border-radius: 20px;
+  width: 400px;
+  padding: 20px;
+  
+}
+.form-div button
+{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color:white;
+  background: #6e54b0;
+  border: none;
+}
+
+.form-div h1
+{
+  text-align: center;
+  color: #b7aeee;
+}
+.form-div input
+{
+  margin-top: 20px;
+}
+.form-div p
+{
+  text-align: center;
+  margin-top: 20px;
+  color: #b7aeee;
+  text-decoration-color: none;
+}
